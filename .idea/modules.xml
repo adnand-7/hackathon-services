@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hive_Assignment.iml" filepath="$PROJECT_DIR$/.idea/Hive_Assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServiceRegistry/ServiceRegistry.iml" filepath="$PROJECT_DIR$/ServiceRegistry/ServiceRegistry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apigateway/apigateway.iml" filepath="$PROJECT_DIR$/apigateway/apigateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/policyGeneration/policyGeneration.iml" filepath="$PROJECT_DIR$/policyGeneration/policyGeneration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/policySelection/policySelection.iml" filepath="$PROJECT_DIR$/policySelection/policySelection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/policyService/policyService.iml" filepath="$PROJECT_DIR$/policyService/policyService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transactionService/transactionService.iml" filepath="$PROJECT_DIR$/transactionService/transactionService.iml" />
+    </modules>
+  </component>
+</project>

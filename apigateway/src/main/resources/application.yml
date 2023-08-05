@@ -1,0 +1,53 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: API-GATEWAY
+
+
+  cloud:
+    gateway:
+      routes:
+        - id: POLICY-SERVICE
+          uri: lb://POLICY-SERVICE
+          predicates:
+            - Path=/policies/**
+
+        - id: POLICY-SELECTION-SERVICE
+          uri: lb://POLICY-SELECTION-SERVICE
+          predicates:
+            - Path=/policie/select/**
+
+        - id: TRANSACTION-SERVICE
+          uri: lb://TRANSACTION-SERVICE
+          predicates:
+            - Path=/payments/{pId},/getById/{pId}
+
+        - id: POLICY-GENERATION-SERVICE
+          uri: lb://POLICY-GENERATION-SERVICE
+          predicates:
+            - Path=/policy/generate/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      shows-details: always
+  metrics:
+    tags:
+      application: API-GATEWAY
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
